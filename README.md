@@ -1,151 +1,71 @@
-🏭 Industrial AI Platform – Predictive Maintenance
+# 🏭 Industrial AI Platform – Predictive Maintenance
 
-
-
-📌 Problem Statement
-
+## 📌 Problem Statement
 Manufacturing systems face unplanned downtime due to unexpected machine failures.
 
-
-
 This project builds an AI-driven predictive maintenance system to:
+- Predict Remaining Useful Life (RUL)
+- Identify critical failure-driving sensors
+- Align predictions with manufacturing KPIs such as OEE
 
-\- Predict Remaining Useful Life (RUL)
+---
 
-\- Identify critical failure-driving sensors
-
-\- Align predictions with manufacturing KPIs like OEE
-
-
-
-\---
-
-
-
-🚀 Solution Overview
-
+## 🚀 Solution Overview
 An end-to-end ML pipeline that processes industrial sensor data and predicts machine failure.
 
+**Pipeline:**  
+Data → Feature Engineering → ML Model → RUL Prediction → OEE Metrics → Insights
 
+---
 
-Pipeline:
+## 🏗️ Architecture
+Data Ingestion → Preprocessing → Feature Engineering → Model Training → Prediction → KPI Calculation (OEE)
 
-Data → Feature Engineering → ML Model → RUL Prediction → OEE Metrics
+---
 
+## 🧠 Features
+- Predict Remaining Useful Life (RUL)
+- Feature importance analysis for sensor insights
+- OEE (Overall Equipment Effectiveness) calculation
+- Industrial time-series feature engineering
 
+---
 
-\---
+## 🛠️ Tech Stack
+- Python
+- Pandas
+- Scikit-learn
+- NumPy
 
+---
 
-
-🧠 Features
-
-
-
-\- Predict Remaining Useful Life (RUL)
-
-\- Feature importance analysis for sensor insights
-
-\- OEE (Overall Equipment Effectiveness) calculation
-
-\- Industrial time-series feature engineering
-
-
-
-\---
-
-
-
-🛠️ Tech Stack
-
-
-
-\- Python
-
-\- Pandas
-
-\- Scikit-learn
-
-\- NumPy
-
-
-
-\---
-
-
-
-📊 Dataset
-
-
-
+## 📊 Dataset
 NASA Turbofan Engine Dataset (CMAPSS)
 
+---
 
+## 📈 Results
+- Model: Random Forest Regressor
+- RMSE: ~41 cycles
 
-\---
+**Key Sensors Identified:**
+- sensor_11 (most important)
+- sensor_4
+- sensor_9
 
+---
 
+## 🏭 Business Impact
+- Predict failures before breakdown
+- Reduce unplanned downtime
+- Improve maintenance planning
+- Align ML outputs with OEE metrics
 
-📈 Results
+---
 
+## ▶️ How to Run
 
-
-\- Model: Random Forest Regressor
-
-\- RMSE: \~41 cycles
-
-\- Key Sensors:
-
-&#x20; - sensor\_11 (most important)
-
-&#x20; - sensor\_4
-
-&#x20; - sensor\_9
-
-
-
-\---
-
-
-
-🏭 Business Impact
-
-
-
-\- Predict failures before breakdown
-
-\- Reduce unplanned downtime
-
-\- Improve maintenance planning
-
-\- Align ML outputs with OEE metrics
-
-
-
-\---
-
-
-
-🔮 Future Improvements
-
-
-
-\- Real-time streaming (MQTT / OPC-UA)
-
-\- FastAPI deployment
-
-\- Dashboard visualization
-
-🏗️ Architecture
-
-
-
-Sensor Data → Feature Engineering → ML Model → RUL Prediction → OEE Metrics → Insights
-
-&#x20;> GenAI assistant for root cause analysis
-⚡ Scalability
-
-
-
-This system can be extended to real-time streaming using MQTT/OPC-UA and deployed via FastAPI for shop floor integration.
-
+```bash
+pip install -r requirements.txt
+python src/explore_data.py
+python src/train_model.py
